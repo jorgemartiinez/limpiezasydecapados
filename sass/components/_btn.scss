@@ -1,0 +1,43 @@
+.btn {
+  font-family: inherit;
+  border: none;
+  font-weight: 500;
+  background-color: $color-secondary;
+  color: $color-white;
+  border-radius: 2rem;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  font-size: 1.7rem;
+  cursor: pointer;
+  transition: all 0.2s; // estado inicial
+  font-size: 1.6rem;
+
+  @include respond(phone) {
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__icon {
+    margin-right: 0.3rem;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2); // sombra 0 en x y 10px en y, blurry 20px y color
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active {
+    // CUANDO CLICAMOS
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2); // al clicar el boton hacemos la sombra más pequeña
+  }
+
+  &--animated {
+    animation: moveInBottom 0.5s ease-out 0.75s; // el ultimo parámetro es un delay
+    animation-fill-mode: backwards; // aplicar estilos del 0% del keyframe
+  }
+}

@@ -1,0 +1,48 @@
+.u-center-text {
+  text-align: center;
+}
+
+// margin-bottom
+.u-margin-bottom-mini {
+  margin-bottom: 1rem;
+}
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem;
+}
+.u-margin-bottom-medium {
+  margin-bottom: 4rem;
+}
+.u-margin-bottom-big {
+  margin-bottom: 8rem;
+}
+
+// margin top
+.u-margin-top-huge {
+  margin-top: 10rem;
+}
+.u-margin-top-big {
+  margin-top: 8rem;
+}
+
+// spacer
+.u-spacer {
+  width: 100%;
+  height: 10rem;
+}
+
+// text
+.u-text-accent {
+  color: $color-secondary;
+}
+
+.u-text-white {
+  color: $color-white;
+}
+
+.u-text-primary {
+  color: $color-primary-2;
+}
+
+.u-text-primary-dark {
+  color: $color-primary-dark;
+}

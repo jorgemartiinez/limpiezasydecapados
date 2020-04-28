@@ -1,0 +1,107 @@
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 2rem;
+  background-color: $color-grey-light;
+  box-shadow: 0 1rem 2rem rgba($color-black, 0.40);
+  z-index: 100;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  @include respond(phone) {
+    display: block;
+  }
+
+  &__logo {
+    width: 20rem;
+    height: auto;
+    margin-top: 2px;
+    @include respond(phone) {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  &__links {
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    @include respond(phone) {
+      margin-top: 2rem;
+      margin-bottom: 1.2rem;
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    list-style-type: none;
+    &:not(:last-child) {
+      margin-right: 3rem;
+      @include respond(phone) {
+        margin-right: 0;
+      }
+    }
+
+    &:last-child {
+      margin-right: 3rem;
+      @include respond(phone) {
+        margin-right: 0;
+      }
+    }
+
+    @include respond(phone) {
+      display: none;
+      margin-bottom: 0.8rem;
+    }
+  }
+
+  &__link {
+    padding: 1.2rem;
+    font-size: 1.7rem;
+    transition: 0.3s ease;
+
+    &:link,
+    &:visited {
+      color: $color-black;
+      text-decoration: none;
+    }
+
+    &:hover {
+      border-top: 2px solid $color-secondary;
+      border-bottom: 2px solid $color-secondary;
+      padding: 6px 0;
+    }
+  }
+
+  .btn {
+    @include respond(tab-land) {
+      margin-top: 1rem;
+    }
+  }
+
+  &__burger {
+    display: none;
+    width: 4rem;
+    margin: 2rem auto;
+    transition: all 0.3s;
+
+    &-line {
+      display: block;
+      border: 1.5px solid black;
+      border-radius: 2rem;
+      margin-bottom: 0.8rem;
+    }
+
+    @include respond(phone) {
+      display: block;
+    }
+  }
+}

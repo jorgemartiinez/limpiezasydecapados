@@ -1,0 +1,72 @@
+.hero {
+  max-height: 80vh;
+  border: 1px solid black;
+  @include respond(phone) {
+    padding: 0rem;
+  }
+  &__welcome {
+    width: 100%;
+    padding: 5rem 2rem;
+  }
+
+  &__illus {
+    border: 1px solid black;
+    padding-top: 1rem;
+    padding-right: 2rem;
+
+    svg {
+     display: block;
+     width: 100%;
+
+      @include respond(phone) {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &__btn {
+    padding: 2rem 5rem;
+  }
+}
+
+.services {
+  background-image: url(../assets/img/bg1.svg);
+  background-repeat: no-repeat;
+  background-attachment: initial;
+  background-size: cover;
+  padding: 10rem;
+
+  .heading-secondary {
+    color: $color-white;
+  }
+
+  @include respond(phone) {
+    padding: 15rem 0;
+    margin-top: .5rem;
+  }
+}
+
+.client-opinion {
+    padding: 5rem;
+    .heading-secondary {
+        color: $color-black;
+    }
+
+}
+
+.trabajos {
+    background-color: $color-grey-light;
+    padding: 5rem;
+}
+
+.folleto {
+  padding: 5rem;
+
+  .btn {
+    display: block;
+    margin: 0 auto;
+    padding: 2rem 5rem;
+  }
+}

@@ -1,0 +1,29 @@
+.service {
+  background-color: $color-white;
+  padding: 4rem 2em;
+  border-radius: 4rem;
+  transition: all 0.3s;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.30);
+  height: 30%;
+
+  &__icon {
+    width: 15rem;
+    height: 10rem;
+    display: inline-block;
+    margin-right: auto;
+  }
+
+  .heading-tertiary {
+      width: 70%;
+  }
+
+  .paragraph{
+      text-align: left;
+  }
+
+  &:hover {
+    transform: translateY(-1.5rem) scale(1.05);
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.50);
+  }
+
+}
