@@ -12,10 +12,6 @@
   transition: all 0.2s; // estado inicial
   font-size: 1.6rem;
 
-  @include respond(phone) {
-    display: block;
-    margin: 0 auto;
-  }
 
   &__icon {
     margin-right: 0.3rem;

@@ -32,10 +32,11 @@
 }
 
 .services {
+  display: block;
   background-image: url(../assets/img/bg1.svg);
   background-repeat: no-repeat;
-  background-attachment: initial;
   background-size: cover;
+  background-origin: border-box;
   padding: 10rem;
 
   .heading-secondary {
@@ -65,8 +66,10 @@
   padding: 5rem;
 
   .btn {
+    font-size: 2.8rem;
+    font-weight: 500;
     display: block;
     margin: 0 auto;
-    padding: 2rem 5rem;
+    padding: 2rem 3rem;
   }
 }

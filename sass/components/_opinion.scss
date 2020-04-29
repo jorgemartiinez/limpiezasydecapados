@@ -7,17 +7,24 @@
   padding: 6rem;
   padding-left: 9rem;
   font-size: $default-font-size;
-  transition: all .3s;
+  transition: all 0.3s;
+
   @include respond(tab-port) {
     width: 100%;
     padding: 4rem;
     padding-left: 7rem;
-}
+  }
+
   &__shape {
     width: 15rem;
     height: 15rem;
     float: left;
     position: relative;
+    @include respond(tab-port) {
+      float: none;
+      display: block;
+      margin: 0 auto;
+    }
   }
 
   &__img {
@@ -25,8 +32,6 @@
     width: 15rem;
     padding: 2rem;
     backface-visibility: hidden;
-    transition: transform ease-out 0.3s;
-
   }
 
   &__caption {
@@ -54,7 +59,8 @@
   }
 
   .paragraph {
-      font-style: italic;
-      font-size: 2rem;
+    font-style: italic;
+    font-size: 2rem;
   }
+
 }

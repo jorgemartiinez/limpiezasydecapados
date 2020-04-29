@@ -4,67 +4,58 @@
   width: 100%;
   padding: 2rem;
   background-color: $color-grey-light;
-  box-shadow: 0 1rem 2rem rgba($color-black, 0.40);
   z-index: 100;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+  transition: all .3s;
 
-  @include respond(phone) {
-    display: block;
+  @include respond(tab-port) {
+    position: initial;
+    box-shadow: 0 .2rem .8rem rgba($color-black, 0.2);
+  }
+
+  &__links {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    @include respond(tab-port) {
+      flex-direction: column;
+    }
   }
 
   &__logo {
     width: 20rem;
-    height: auto;
     margin-top: 2px;
-    @include respond(phone) {
-      display: block;
-      margin: 0 auto;
-    }
-  }
-
-  &__links {
-    margin-left: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-
-    @include respond(phone) {
-      margin-top: 2rem;
-      margin-bottom: 1.2rem;
-      width: 100%;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
+    margin-right: auto;
+    align-self: flex-start;
   }
 
   &__item {
     list-style-type: none;
-    &:not(:last-child) {
-      margin-right: 3rem;
-      @include respond(phone) {
-        margin-right: 0;
-      }
-    }
 
-    &:last-child {
-      margin-right: 3rem;
-      @include respond(phone) {
-        margin-right: 0;
-      }
-    }
-
-    @include respond(phone) {
+    &:first-child { // no mostrar el burguer icon
       display: none;
-      margin-bottom: 0.8rem;
+      @include respond(tab-port) {
+        display: flex;
+      }
+    }
+
+    &:nth-of-type(2){ // en móvil, cambiar el orden de la imagen
+      @include respond(tab-port) {
+        flex-basis: 100%;
+        margin: 2em;
+        order: -10;
+      }
+    }
+    &:not(:first-child):not(:nth-of-type(2)):not(:last-child) {
+      @include respond(tab-port) {
+        display: none;
+        margin: 1.2rem;
+      }
     }
   }
 
   &__link {
-    padding: 1.2rem;
     font-size: 1.7rem;
     transition: 0.3s ease;
 
@@ -81,17 +72,12 @@
     }
   }
 
-  .btn {
-    @include respond(tab-land) {
-      margin-top: 1rem;
-    }
-  }
-
   &__burger {
     display: none;
     width: 4rem;
     margin: 2rem auto;
     transition: all 0.3s;
+    cursor: pointer;
 
     &-line {
       display: block;
@@ -100,8 +86,23 @@
       margin-bottom: 0.8rem;
     }
 
-    @include respond(phone) {
+    @include respond(tab-port) {
       display: block;
     }
   }
+
+
+  .btn {
+    margin-left: auto;
+    @include respond(tab-port) {
+      margin-top: 1rem;
+      font-size: 2rem;
+      padding: 1rem 2rem;
+    }
+  }
+ 
+}
+
+.active {
+  color: $color-secondary;
 }
