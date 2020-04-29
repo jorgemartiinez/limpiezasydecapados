@@ -32,12 +32,16 @@
 
   &__item {
     list-style-type: none;
-
+    margin: 1rem 2rem;
     &:first-child { // no mostrar el burguer icon
       display: none;
       @include respond(tab-port) {
         display: flex;
       }
+    }
+
+    &:nth-of-type(3) { // mueve el primer item a la derecha y así los demás
+      margin-left: auto;
     }
 
     &:nth-of-type(2){ // en móvil, cambiar el orden de la imagen
