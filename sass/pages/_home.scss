@@ -1,6 +1,33 @@
 .hero {
   min-height: 75vh;
   // border: 1px solid black;
+
+
+  //---------DIRTY HACK
+  #mobile-col {
+    display: none;
+    @include respond(tab-port) {
+      display: block;
+    }
+
+    .hero__illus{
+      @include respond(tab-port) {
+        display: block;
+        margin: 0 auto;
+        width: 60rem;
+        margin-top: 5rem;
+        margin-bottom: 3rem;
+      }
+    }
+  }
+
+  .col-1-of-2:nth-of-type(3){
+    @include respond(tab-port) {
+      display: none;
+    }
+  }
+  //------ END DIRTY HACK
+
   @include respond(phone) {
     padding: 0rem;
   }
