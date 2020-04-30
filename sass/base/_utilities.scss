@@ -25,6 +25,9 @@
 }
 .u-margin-top-big {
   margin-top: 8rem;
+  @include respond(tab-port) {
+    margin-top: 5rem;
+  }
 }
 
 // spacer
