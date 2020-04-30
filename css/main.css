@@ -468,7 +468,7 @@ body {
       padding: 0 2rem; } }
   @media only screen and (max-width: 75em) {
     .row {
-      max-width: 120rem;
+      max-width: 110rem;
       padding: 0 1rem; } }
   .row::after {
     content: '';
@@ -499,7 +499,7 @@ body {
     width: calc(3 * ((100% - 3 * 3rem) / 4) + 2 * 3rem); }
 
 .hero {
-  max-height: 80vh; }
+  min-height: 75vh; }
   @media only screen and (max-width: 37.5em) {
     .hero {
       padding: 0rem; } }
@@ -532,7 +532,7 @@ body {
     color: #fff; }
   @media only screen and (max-width: 37.5em) {
     .services {
-      padding: 15rem 0;
+      padding: 20rem 1rem 10rem 1rem;
       margin-top: .5rem; } }
 
 .client-opinion {
