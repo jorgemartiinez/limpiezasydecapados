@@ -234,6 +234,10 @@ body {
     margin-right: auto;
     -ms-flex-item-align: start;
         align-self: flex-start; }
+    @media only screen and (max-width: 56.25em) {
+      .nav__logo {
+        margin-top: 1rem;
+        margin-bottom: 2rem; } }
   .nav__item {
     list-style-type: none;
     margin: 1rem 2rem; }
@@ -289,6 +293,7 @@ body {
     @media only screen and (max-width: 56.25em) {
       .nav .btn {
         margin-top: 1rem;
+        margin-bottom: 2rem;
         font-size: 2rem;
         padding: 1rem 2rem; } }
 
