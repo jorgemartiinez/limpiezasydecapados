@@ -166,7 +166,7 @@ body {
 
 .u-spacer {
   width: 100%;
-  height: 12rem; }
+  height: 10rem; }
   @media only screen and (max-width: 56.25em) {
     .u-spacer {
       height: 2rem; } }
@@ -196,7 +196,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 2rem;
+  padding: .5rem 3rem;
   background-color: #F5F5F5;
   z-index: 100;
   -webkit-transition: all .3s;
@@ -455,7 +455,7 @@ body {
             filter: blur(5px) brightness(50%); }
 
 .row {
-  max-width: 150rem;
+  max-width: 125rem;
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
@@ -499,8 +499,7 @@ body {
     width: calc(3 * ((100% - 3 * 4rem) / 4) + 2 * 4rem); }
 
 .hero {
-  max-height: 80vh;
-  border: 1px solid black; }
+  max-height: 80vh; }
   @media only screen and (max-width: 37.5em) {
     .hero {
       padding: 0rem; } }
@@ -508,7 +507,6 @@ body {
     width: 100%;
     padding: 5rem 2rem; }
   .hero__illus {
-    border: 1px solid black;
     padding-top: 1rem;
     padding-right: 2rem; }
     .hero__illus svg {
@@ -520,7 +518,8 @@ body {
           width: 80%;
           margin: 0 auto; } }
   .hero__btn {
-    padding: 2rem 5rem; }
+    font-size: 1.8rem;
+    padding: 2rem 3rem; }
 
 .services {
   display: block;
@@ -548,9 +547,9 @@ body {
 .folleto {
   padding: 5rem; }
   .folleto .btn {
-    font-size: 2.8rem;
+    font-size: 2rem;
     font-weight: 500;
     display: block;
     margin: 0 auto;
-    padding: 2rem 3rem; }
+    padding: 2rem 2rem; }
 /*# sourceMappingURL=main.css.map */
