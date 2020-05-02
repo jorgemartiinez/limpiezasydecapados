@@ -3,7 +3,7 @@ $(document).ready(function () {
 
   // * MENÚ MOVIL
   var menuBtn = $('.nav__burger');
-  var navItems = $('.nav__item');
+  var navItems = $('.nav__links');
   var menuOpen = false;
   menuBtn.click(function () {
     if (!menuOpen) {
