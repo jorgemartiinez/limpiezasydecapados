@@ -37,3 +37,24 @@ body {
     padding: 0;
   }
 }
+
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+p::selection,
+a::selection,
+span::selection {
+  background-color: $color-secondary-dark;
+  color: #fff;
+}
+
+::-webkit-scrollbar{
+  width: 1.5rem;
+  background-color: $color-grey-light-2;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $color-secondary;
+  border-radius: 1rem;
+}

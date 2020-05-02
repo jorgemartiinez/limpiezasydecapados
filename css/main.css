@@ -114,6 +114,34 @@ body {
     body {
       padding: 0; } }
 
+h1::-moz-selection,
+h2::-moz-selection,
+h3::-moz-selection,
+h4::-moz-selection,
+p::-moz-selection,
+a::-moz-selection,
+span::-moz-selection {
+  background-color: #795fce;
+  color: #fff; }
+
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+p::selection,
+a::selection,
+span::selection {
+  background-color: #795fce;
+  color: #fff; }
+
+::-webkit-scrollbar {
+  width: 1.5rem;
+  background-color: #e6e6e6; }
+
+::-webkit-scrollbar-thumb {
+  background-color: #775ADA;
+  border-radius: 1rem; }
+
 .heading-primary {
   font-size: 5rem;
   font-weight: 500;
