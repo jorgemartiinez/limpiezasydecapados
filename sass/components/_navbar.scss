@@ -37,7 +37,6 @@
       top: 0%;
       color: white;
       width: 100%;
-      transform: translateX(100%);
     }
   }
 
@@ -92,10 +91,9 @@
     padding: 2rem 1rem;
     @include respond(tab-port) {
       display: block;
-      transform: translateX(100%);
       position: absolute;
       top: 0%;
-      left: 0%;
+      left: 2%;
       cursor: pointer;
     }
   }
@@ -141,11 +139,14 @@
 }
 
 .show-menu {
-  // transform: translateX(0%);
-  // display: flex;
-  animation: translateTo0 .3s;
+  animation: translateTo0 .4s;
+  display: flex;
 }
 
 .hide-menu {
-  display: none;
+  animation: translateTo100 .3s;
+}
+
+.active {
+  background-color: red;
 }

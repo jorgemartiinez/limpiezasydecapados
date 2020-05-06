@@ -12,49 +12,45 @@ $(document).ready(function () {
   });
 
   navCross.click(function () {
-    navItems.removeClass('show-menu');
     navItems.addClass('hide-menu');
+    setTimeout(function () {
+      navItems.removeClass('show-menu');
+    }, 290);
   });
 
-  // ---------------------
-  // * animar scroll en los links que empiezen con #
-  $(document).on('click', 'a[href^="#"]', function (e) {
-    // target element id
-    var id = $(this).attr('href');
 
-    // target element
-    var $id = $(id);
-    if ($id.length === 0) {
-      return;
+  // * añadir clase para elevar el nav al empezar a hacer scroll
+  $('nav a').on('click', function() {
+
+    var scrollAnchor = $(this).attr('data-scroll'),
+        scrollPoint = $('section[data-anchor="' + scrollAnchor + '"]').offset().top - 28;
+
+    $('body,html').animate({
+        scrollTop: scrollPoint
+    }, 500);
+
+    return false;
+
+})
+  $(window).scroll(function() {
+    var windscroll = $(window).scrollTop();
+    if (windscroll >= 100) {
+        $('nav').addClass('u-shadow');
+        $('section').each(function(i) {
+            if ($(this).position().top <= windscroll - 20) {
+                $('nav a.active').removeClass('active');
+                $('nav a').eq(i).addClass('active');
+            }
+        });
+
+    } else {
+
+        $('nav').removeClass('u-shadow');
+        $('nav a.active').removeClass('active');
+        $('nav a:first').addClass('active');
     }
 
-    // prevent standard hash navigation (avoid blinking in IE)
-    e.preventDefault();
-
-    // top position relative to the document
-    var pos = $id.offset().top - 50;
-
-    // animated top scrolling
-    $('body, html').animate({ scrollTop: pos });
-  });
-  // -----------------
-  // * añadir clase para elevar el nav al empezar a hacer scroll
-  $(window)
-    .scroll(function () {
-      var windscroll = $(window).scrollTop();
-      if (windscroll >= 100) {
-        $('nav').addClass('u-shadow');
-        // $('.wrapper section').each(function (i) {
-        //   if ($(this).position().top <= windscroll - 100) {
-        //     $('nav a.active').removeClass('active');
-        //     $('nav a').eq(i).addClass('active');
-        //   }
-        // });
-      } else {
-        $('nav').removeClass('u-shadow');
-      }
-    })
-    .scroll();
+}).scroll();
 
   //aaa
   // // Optimalisation: Store the references outside the event handler:
@@ -62,7 +58,7 @@ $(document).ready(function () {
 
   function checkWidth() {
     var windowsize = $window.width();
-    if (windowsize > 899) {
+    if (windowsize > 895) {
       navItems.removeClass('hide-menu');
       navItems.removeClass('show-menu');
     }

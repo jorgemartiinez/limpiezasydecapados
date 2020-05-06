@@ -45,14 +45,12 @@
 
 @keyframes translateTo0 {
     0% {
-        display: none;
         transform: translateX(100%);
     }
     80%{
-        transform: translateX(10%);
+        transform: translateX(-5%);
     }
     100% {
-        display: flex;
         transform: translateX(0%);
     }
 }
@@ -60,9 +58,11 @@
 @keyframes translateTo100 {
     0% {
         transform: translateX(0%);
+        opacity: 1;
     }
 
     100% {
+        opacity: 0;
         transform: translateX(100%);
     }
 }

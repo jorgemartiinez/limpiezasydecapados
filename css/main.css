@@ -85,48 +85,43 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 @-webkit-keyframes translateTo0 {
   0% {
-    display: none;
     -webkit-transform: translateX(100%);
             transform: translateX(100%); }
   80% {
-    -webkit-transform: translateX(10%);
-            transform: translateX(10%); }
+    -webkit-transform: translateX(-5%);
+            transform: translateX(-5%); }
   100% {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
     -webkit-transform: translateX(0%);
             transform: translateX(0%); } }
 
 @keyframes translateTo0 {
   0% {
-    display: none;
     -webkit-transform: translateX(100%);
             transform: translateX(100%); }
   80% {
-    -webkit-transform: translateX(10%);
-            transform: translateX(10%); }
+    -webkit-transform: translateX(-5%);
+            transform: translateX(-5%); }
   100% {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-transform: translateX(0%);
             transform: translateX(0%); } }
 
 @-webkit-keyframes translateTo100 {
   0% {
     -webkit-transform: translateX(0%);
-            transform: translateX(0%); }
+            transform: translateX(0%);
+    opacity: 1; }
   100% {
+    opacity: 0;
     -webkit-transform: translateX(100%);
             transform: translateX(100%); } }
 
 @keyframes translateTo100 {
   0% {
     -webkit-transform: translateX(0%);
-            transform: translateX(0%); }
+            transform: translateX(0%);
+    opacity: 1; }
   100% {
+    opacity: 0;
     -webkit-transform: translateX(100%);
             transform: translateX(100%); } }
 
@@ -336,10 +331,7 @@ span::selection {
         right: 0%;
         top: 0%;
         color: white;
-        width: 100%;
-        -webkit-transform: translateX(100%);
-            -ms-transform: translateX(100%);
-                transform: translateX(100%); } }
+        width: 100%; } }
   .nav__links {
     list-style: none;
     display: -webkit-box;
@@ -419,12 +411,9 @@ span::selection {
     @media only screen and (max-width: 56.25em) {
       .nav__cross {
         display: block;
-        -webkit-transform: translateX(100%);
-            -ms-transform: translateX(100%);
-                transform: translateX(100%);
         position: absolute;
         top: 0%;
-        left: 0%;
+        left: 2%;
         cursor: pointer; } }
   .nav__cross:before, .nav__cross:after {
     position: absolute;
@@ -460,11 +449,19 @@ span::selection {
         text-align: right; } }
 
 .show-menu {
-  -webkit-animation: translateTo0 .3s;
-          animation: translateTo0 .3s; }
+  -webkit-animation: translateTo0 .4s;
+          animation: translateTo0 .4s;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
 
 .hide-menu {
-  display: none; }
+  -webkit-animation: translateTo100 .3s;
+          animation: translateTo100 .3s; }
+
+.active {
+  background-color: red; }
 
 .btn {
   font-family: inherit;
