@@ -15,45 +15,52 @@ $(document).ready(function () {
     navItems.addClass('hide-menu');
     setTimeout(function () {
       navItems.removeClass('show-menu');
-    }, 290);
+    }, 250);
   });
+  // ---------------------
+  // * animar scroll en los links que empiezen con #
+  $(document).on('click', 'a[href^="#"]', function (e) {
+    // target element id
+    var id = $(this).attr('href');
 
-
-  // * añadir clase para elevar el nav al empezar a hacer scroll
-  $('nav a').on('click', function() {
-
-    var scrollAnchor = $(this).attr('data-scroll'),
-        scrollPoint = $('section[data-anchor="' + scrollAnchor + '"]').offset().top - 28;
-
-    $('body,html').animate({
-        scrollTop: scrollPoint
-    }, 500);
-
-    return false;
-
-})
-  $(window).scroll(function() {
-    var windscroll = $(window).scrollTop();
-    if (windscroll >= 100) {
-        $('nav').addClass('u-shadow');
-        $('section').each(function(i) {
-            if ($(this).position().top <= windscroll - 20) {
-                $('nav a.active').removeClass('active');
-                $('nav a').eq(i).addClass('active');
-            }
-        });
-
-    } else {
-
-        $('nav').removeClass('u-shadow');
-        $('nav a.active').removeClass('active');
-        $('nav a:first').addClass('active');
+    // target element
+    var $id = $(id);
+    if ($id.length === 0) {
+      return;
     }
+    // prevent standard hash navigation (avoid blinking in IE)
+    e.preventDefault();
 
-}).scroll();
+    // top position relative to the document
+    var pos = $id.offset().top - 20;
+
+    // animated top scrolling
+    $('body, html').animate({ scrollTop: pos }, 800);
+  });
+  // -----------------
+
+  $(window)
+    .scroll(function () {
+      var windscroll = $(window).scrollTop();
+      if (windscroll >= 100) {
+        $('nav').addClass('u-shadow');
+        // $('.main > section[id]').each(function (i) {
+        //   console.log('each section', $(this).position().top, windscroll - 20);
+        //   if ($(this).position().top <= windscroll - 100) {
+        //     $('.nav__item a.active').removeClass('active');
+        //     $('.nav__item a').eq(i).addClass('active');
+        //   }
+        // });
+      } else {
+        $('nav').removeClass('u-shadow');
+        // $('.nav__item a.active').removeClass('active');
+        // $('.nav__item a:first').addClass('active');
+      }
+    })
+    .scroll();
 
   //aaa
-  // // Optimalisation: Store the references outside the event handler:
+  // Optimalisation: Store the references outside the event handler:
   var $window = $(window);
 
   function checkWidth() {

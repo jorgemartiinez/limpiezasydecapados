@@ -152,7 +152,8 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   line-height: 1.7;
-  color: #000; }
+  color: #000;
+  overflow-x: hidden; }
   @media only screen and (max-width: 56.25em) {
     body {
       padding: 0; } }
@@ -194,13 +195,16 @@ span::selection {
   color: #002651; }
   @media only screen and (max-width: 37.5em) {
     .heading-primary {
-      font-size: 4rem; } }
+      font-size: 3.5rem; } }
 
 .heading-secondary {
   text-transform: uppercase;
   font-weight: 500;
   font-size: 3.5rem;
   color: #002651; }
+  @media only screen and (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 3rem; } }
 
 .heading-tertiary {
   text-transform: uppercase;
@@ -241,7 +245,7 @@ span::selection {
 
 .u-spacer {
   width: 100%;
-  height: 15rem; }
+  height: 10rem; }
   @media only screen and (max-width: 56.25em) {
     .u-spacer {
       height: 2rem; } }
@@ -267,6 +271,43 @@ span::selection {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
+
+.btn {
+  font-family: inherit;
+  border: none;
+  font-weight: 500;
+  background-color: #775ADA;
+  color: #fff;
+  -webkit-border-radius: 2rem;
+          border-radius: 2rem;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  font-size: 1.7rem;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  font-size: 1.6rem;
+  outline: none; }
+  .btn__icon {
+    margin-right: 0.3rem; }
+  .btn:hover {
+    -webkit-transform: translateY(-3px);
+        -ms-transform: translateY(-3px);
+            transform: translateY(-3px);
+    -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn:active {
+    -webkit-transform: translateY(-1px);
+        -ms-transform: translateY(-1px);
+            transform: translateY(-1px);
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+  .btn--animated {
+    -webkit-animation: moveInBottom 0.5s ease-out 0.75s;
+            animation: moveInBottom 0.5s ease-out 0.75s;
+    -webkit-animation-fill-mode: backwards;
+            animation-fill-mode: backwards; }
 
 .nav {
   position: fixed;
@@ -461,49 +502,8 @@ span::selection {
           animation: translateTo100 .3s; }
 
 .active {
-  background-color: red; }
-
-.btn {
-  font-family: inherit;
-  border: none;
-  font-weight: 500;
-  background-color: #775ADA;
-  color: #fff;
-  -webkit-border-radius: 2rem;
-          border-radius: 2rem;
-  text-decoration: none;
-  padding: 1rem 2rem;
-  font-size: 1.7rem;
-  cursor: pointer;
-  -webkit-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s;
-  font-size: 1.6rem;
-  outline: none; }
-  .btn__icon {
-    margin-right: 0.3rem; }
-  .btn:hover {
-    -webkit-transform: translateY(-3px);
-        -ms-transform: translateY(-3px);
-            transform: translateY(-3px);
-    -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
-    .btn:hover::after {
-      -webkit-transform: scaleX(1.4) scaleY(1.6);
-          -ms-transform: scaleX(1.4) scaleY(1.6);
-              transform: scaleX(1.4) scaleY(1.6);
-      opacity: 0; }
-  .btn:active {
-    -webkit-transform: translateY(-1px);
-        -ms-transform: translateY(-1px);
-            transform: translateY(-1px);
-    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
-  .btn--animated {
-    -webkit-animation: moveInBottom 0.5s ease-out 0.75s;
-            animation: moveInBottom 0.5s ease-out 0.75s;
-    -webkit-animation-fill-mode: backwards;
-            animation-fill-mode: backwards; }
+  color: #795fce;
+  font-weight: 500; }
 
 .service {
   background-color: #fff;
@@ -695,7 +695,8 @@ span::selection {
     width: calc(3 * ((100% - 3 * 3rem) / 4) + 2 * 3rem); }
 
 .hero {
-  min-height: 75vh; }
+  min-height: 75vh;
+  padding: 2rem 0; }
   .hero #mobile-col {
     display: none; }
     @media only screen and (max-width: 56.25em) {
@@ -710,6 +711,9 @@ span::selection {
   .hero__welcome {
     width: 100%;
     padding: 5rem 2rem; }
+    @media only screen and (max-width: 56.25em) {
+      .hero__welcome {
+        padding-top: 0; } }
   .hero__illus {
     padding-top: 1rem;
     padding-right: 2rem;
@@ -717,18 +721,32 @@ span::selection {
     @media only screen and (max-width: 56.25em) {
       .hero__illus {
         display: block;
-        width: 45rem;
+        width: 44rem;
         margin: 5rem auto; } }
   .hero__btn {
     font-size: 1.8rem;
     padding: 2rem 3rem; }
+    .hero__btn:hover {
+      -webkit-transform: translateY(-3px);
+          -ms-transform: translateY(-3px);
+              transform: translateY(-3px);
+      -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+              box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+    .hero__btn:active {
+      -webkit-transform: translateY(-1px);
+          -ms-transform: translateY(-1px);
+              transform: translateY(-1px);
+      -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+              box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
 .services {
-  display: block;
   background-image: url(../assets/img/bg1.svg);
   background-repeat: no-repeat;
   -webkit-background-size: cover;
           background-size: cover;
+  -webkit-background-clip: border-box;
+          background-clip: border-box;
+  background-position: top;
   -webkit-background-origin: border-box;
           background-origin: border-box;
   padding: 10rem; }
@@ -736,8 +754,8 @@ span::selection {
     color: #fff; }
   @media only screen and (max-width: 37.5em) {
     .services {
-      padding: 17rem 1rem 5rem 1rem;
-      margin-top: .5rem; } }
+      padding: 8em 1rem 5rem 1rem;
+      margin-top: 0.5rem; } }
 
 .client-opinion {
   padding: 5rem; }
@@ -749,7 +767,8 @@ span::selection {
   padding: 5rem; }
 
 .folleto {
-  padding: 5rem; }
+  padding: 5rem;
+  font-size: 1.5rem; }
   .folleto .btn {
     font-size: 2rem;
     font-weight: 500;

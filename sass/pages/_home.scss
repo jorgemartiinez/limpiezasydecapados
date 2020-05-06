@@ -1,8 +1,7 @@
 .hero {
   min-height: 75vh;
   // border: 1px solid black;
-
-
+  padding: 2rem 0;
   //---------DIRTY HACK
   #mobile-col {
     display: none;
@@ -11,7 +10,7 @@
     }
   }
 
-  .col-1-of-2:nth-of-type(3){
+  .col-1-of-2:nth-of-type(3) {
     @include respond(tab-port) {
       display: none;
     }
@@ -25,6 +24,9 @@
   &__welcome {
     width: 100%;
     padding: 5rem 2rem;
+    @include respond(tab-port) {
+      padding-top: 0;
+    }
   }
 
   &__illus {
@@ -35,7 +37,7 @@
 
     @include respond(tab-port) {
       display: block;
-      width: 45rem;
+      width: 44rem;
       margin: 5rem auto;
     }
   }
@@ -43,14 +45,24 @@
   &__btn {
     font-size: 1.8rem;
     padding: 2rem 3rem;
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.2); // sombra 0 en x y 10px en y, blurry 20px y color
+    }
+
+    &:active {
+      transform: translateY(-1px);
+      box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2); // al clicar el boton hacemos la sombra más pequeña
+    }
   }
 }
 
 .services {
-  display: block;
   background-image: url(../assets/img/bg1.svg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-clip: border-box;
+  background-position: top;
   background-origin: border-box;
   padding: 10rem;
 
@@ -59,22 +71,21 @@
   }
 
   @include respond(phone) {
-    padding: 17rem 1rem 5rem 1rem;
-    margin-top: .5rem;
+    padding: 8em 1rem 5rem 1rem;
+    margin-top: 0.5rem;
   }
 }
 
 .client-opinion {
-    padding: 5rem;
-    .heading-secondary {
-        color: $color-black;
-    }
-
+  padding: 5rem;
+  .heading-secondary {
+    color: $color-black;
+  }
 }
 
 .trabajos {
-    background-color: $color-grey-light;
-    padding: 5rem;
+  background-color: $color-grey-light;
+  padding: 5rem;
 }
 
 .folleto {
@@ -87,4 +98,7 @@
     margin: 0 auto;
     padding: 2rem 2rem;
   }
+
+  font-size: 1.5rem;
+
 }

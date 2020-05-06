@@ -20,10 +20,6 @@
   &:hover {
     transform: translateY(-3px);
     box-shadow: 0 1rem 2rem rgba($color-black, 0.2); // sombra 0 en x y 10px en y, blurry 20px y color
-    &::after {
-      transform: scaleX(1.4) scaleY(1.6);
-      opacity: 0;
-    }
   }
 
   &:active {

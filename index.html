@@ -10,10 +10,12 @@
     <title>Inicio | Limpieza y Decapado Alcoy</title>
   </head>
   <body>
-    <header class="header" id="inicio" data-anchor="inicio">
+    <header class="header">
       <nav class="nav">
         <div class="nav__logo">
-            <img class="nav__logo" src="assets/img/logo-solucionesK3.svg" alt="Logo Limpiezas y Fachadas Alcoy" />
+          <a href="#inicio">
+          <img class="nav__logo" src="assets/img/logo-solucionesK3.svg" alt="Logo Limpiezas y Fachadas Alcoy" />
+          <a>
         </div>
         <div class="nav__mobile">
           <div class="nav__burger">
@@ -36,18 +38,19 @@
             <li class="nav__item">
               <a href="#contacto" class="nav__link" data-scroll="contacto">contacto</a>
             </li>
+            <a class="nav__cross"> </a>
           </ul>
-          <a class="nav__cross"> </a>
         </div>
         <div class="nav__btn">
           <button class="btn"><i class="icofont-phone"></i>676 201 598</button>
         </div>
       </nav>
     </header>
-    <div class="u-spacer">
-      &nbsp;
-    </div>
-    <section class="hero" >
+
+    <section class="hero" id="inicio" data-anchor="inicio">
+      <div class="u-spacer">
+        &nbsp;
+      </div>
       <div class="row">
         <div class="col-1-of-2" id="mobile-col">
           <div class="hero__illus">
@@ -164,7 +167,7 @@
               precio muy económico.
             </p>
             <div class="u-center-text">
-              <a href="#servicios" class="btn hero__btn">SABER MÁS</a>
+              <a href="#servicios" data-scroll="servicios" class="btn hero__btn">SABER MÁS</a>
             </div>
           </div>
         </div>
