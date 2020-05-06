@@ -41,3 +41,28 @@
         opacity: 1;
     }
 }
+
+
+@keyframes translateTo0 {
+    0% {
+        display: none;
+        transform: translateX(100%);
+    }
+    80%{
+        transform: translateX(10%);
+    }
+    100% {
+        display: flex;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes translateTo100 {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}

@@ -8,6 +8,7 @@
 
 html {
   font-size: 62.5%;
+  height: 100%;
 
   @include respond(tab-land) {
     // width < 1200?
@@ -29,9 +30,9 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   line-height: 1.7;
-  // overflow-x: hidden;
   color: $color-black;
   // padding: 0rem 3rem;
+  // overflow-x: hidden; // !OJO
 
   @include respond(tab-port) {
     padding: 0;
