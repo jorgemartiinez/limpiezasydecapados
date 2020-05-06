@@ -1,7 +1,7 @@
 .hero {
   min-height: 75vh;
   // border: 1px solid black;
-  padding: 2rem 0;
+  padding: 5rem 0;
   //---------DIRTY HACK
   #mobile-col {
     display: none;
@@ -27,6 +27,15 @@
     @include respond(tab-port) {
       padding-top: 0;
     }
+
+    .heading-primary {
+      animation: moveInLeft .6s ease-in-out;
+    }
+
+    .paragraph {
+      animation: moveInRight .6s ease-in-out .3s;
+    }
+
   }
 
   &__illus {
@@ -45,8 +54,14 @@
   &__btn {
     font-size: 1.8rem;
     padding: 2rem 3rem;
+    background-color: transparent;
+    border: 2px solid $color-secondary;
+    color: $color-secondary;
+    animation: moveInLeft .6s ease-in-out .6s;
+
     &:hover {
-      transform: translateY(-3px);
+      background-color: $color-secondary;
+      color: #fff;
       box-shadow: 0 1rem 2rem rgba($color-black, 0.2); // sombra 0 en x y 10px en y, blurry 20px y color
     }
 
@@ -97,6 +112,7 @@
     display: block;
     margin: 0 auto;
     padding: 2rem 2rem;
+
   }
 
   font-size: 1.5rem;

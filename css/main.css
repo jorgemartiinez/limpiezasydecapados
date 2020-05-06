@@ -696,7 +696,7 @@ span::selection {
 
 .hero {
   min-height: 75vh;
-  padding: 2rem 0; }
+  padding: 5rem 0; }
   .hero #mobile-col {
     display: none; }
     @media only screen and (max-width: 56.25em) {
@@ -714,6 +714,12 @@ span::selection {
     @media only screen and (max-width: 56.25em) {
       .hero__welcome {
         padding-top: 0; } }
+    .hero__welcome .heading-primary {
+      -webkit-animation: moveInLeft .6s ease-in-out;
+              animation: moveInLeft .6s ease-in-out; }
+    .hero__welcome .paragraph {
+      -webkit-animation: moveInRight .6s ease-in-out .3s;
+              animation: moveInRight .6s ease-in-out .3s; }
   .hero__illus {
     padding-top: 1rem;
     padding-right: 2rem;
@@ -725,11 +731,15 @@ span::selection {
         margin: 5rem auto; } }
   .hero__btn {
     font-size: 1.8rem;
-    padding: 2rem 3rem; }
+    padding: 2rem 3rem;
+    background-color: transparent;
+    border: 2px solid #775ADA;
+    color: #775ADA;
+    -webkit-animation: moveInLeft .6s ease-in-out .6s;
+            animation: moveInLeft .6s ease-in-out .6s; }
     .hero__btn:hover {
-      -webkit-transform: translateY(-3px);
-          -ms-transform: translateY(-3px);
-              transform: translateY(-3px);
+      background-color: #775ADA;
+      color: #fff;
       -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
               box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
     .hero__btn:active {
