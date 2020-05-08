@@ -14,8 +14,8 @@
       <nav class="nav">
         <div class="nav__logo">
           <a href="#inicio">
-          <img class="nav__logo" src="assets/img/logo-solucionesK3.svg" alt="Logo Limpiezas y Fachadas Alcoy" />
-          <a>
+            <img class="nav__logo" src="assets/img/logo-solucionesK3.svg" alt="Logo Limpiezas y Fachadas Alcoy" />
+          </a>
         </div>
         <div class="nav__mobile">
           <div class="nav__burger">
@@ -167,7 +167,7 @@
               precio muy económico.
             </p>
             <div class="u-center-text">
-              <a href="#servicios" data-scroll="servicios" class="btn hero__btn">SABER MÁS</a>
+              <a href="#servicios" data-scroll="servicios" class="btn btn--outline">SABER MÁS</a>
             </div>
           </div>
         </div>
@@ -451,9 +451,47 @@
           <button class="btn">DESCARGAR FOLLETO</button>
         </div>
       </section>
-
-      <section class="contact" id="contacto" data-anchor="contacto"></section>
     </main>
+
+    <section class="contact" id="contacto" data-anchor="contacto">
+      <div class="row">
+        <form class="form u-center-text" method="post" action="contact/mail.php">
+          <fieldset class="form__fieldset u-margin-bottom-medium u-text-white">
+            <legend class="heading-secondary u-margin-bottom-small u-center-text u-text-white">Contacto</legend>
+            <p class="paragraph u-center-text u-margin-bottom-big">
+              No dudes en ponerte con nosotros para cualquier consulta o presupuesto. Nuestro equipo de profesionales estará encantado de atenderte
+              con la mayor brevedad posible.
+            </p>
+            <div class="row">
+              <label for="nombre" class="form__label">Nombre: </label>
+              <input type="text" id="nombre" name="nombre" minlength="2" maxlength="150" class="form__input" onkeyup="comprobarCampo(this)" />
+              <span class="form__error" id="error-nombre"></span>
+            </div>
+            <div class="row">
+              <label for="email" class="form__label">Correo: </label>
+              <input type="email" id="email" name="email" minlength="5" maxlength="180" class="form__input" onkeyup="checkInput(this)" />
+              <span class="form__error" id="error-email"></span>
+            </div>
+            <div class="row">
+              <label for="mensaje" class="form__label">Mensaje: </label>
+              <textarea
+                type="text"
+                id="mensaje"
+                name="mensaje"
+                class="form__textarea"
+                minlength="10"
+                maxlength="300"
+                onkeyup="checkInput(this)"
+              ></textarea>
+              <span class="form__error" id="error-mensaje"></span>
+            </div>
+          </fieldset>
+          <button class="btn btn--outline btn--border-thic" type="submit">ENVIAR</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer"></footer>
 
     <script
       src="https://code.jquery.com/jquery-3.5.0.min.js"

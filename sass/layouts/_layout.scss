@@ -73,12 +73,9 @@
 }
 
 .services {
-  background-image: url(../assets/img/bg1.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-clip: border-box;
-  background-position: top;
-  background-origin: border-box;
+
+  @include bg("../assets/img/bg1.svg");
+
   padding: 10rem;
 
   .heading-secondary {
@@ -114,7 +111,12 @@
     padding: 2rem 2rem;
 
   }
-
   font-size: 1.5rem;
 
+}
+
+.contact {
+  padding: 10rem;
+
+  @include bg("../assets/img/bg2.svg")
 }

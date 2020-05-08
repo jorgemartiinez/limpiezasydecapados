@@ -26,9 +26,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all .3s;
+    transition: all 0.3s;
 
-    @include respond(tab-port) { // posicionar fuera el menu para desplegarlo al clicar
+    @include respond(tab-port) {
+      // posicionar fuera el menu para desplegarlo al clicar
       display: none;
       background-color: $color-primary;
       flex: 0 0 100%;
@@ -37,9 +38,11 @@
       top: 0%;
       color: white;
       width: 100%;
+      height: 100vh;
+      z-index: 200;
+
     }
   }
-
 
   &__links {
     list-style: none;
@@ -48,16 +51,20 @@
     justify-content: space-around;
 
     @include respond(tab-port) {
+      font-size: 2.8rem;
       order: 4;
       flex-direction: column;
       flex: 0 0 100%;
-      justify-content: flex-start;
-      align-items: flex-end;
+      justify-content: space-around;
+      align-items: center;
     }
   }
 
   &__item {
     margin: 2rem;
+    @include respond(tab-port) {
+      margin-bottom: 5rem;
+    }
   }
 
   &__link {
@@ -88,17 +95,18 @@
   // CRUZ PARA CERRAR EL MENU EN MOVIL
   &__cross {
     display: none;
-    padding: 2rem 1rem;
     @include respond(tab-port) {
+      font-size: 15rem;
       display: block;
       position: absolute;
-      top: 0%;
-      left: 2%;
+      top: 5%;
+      left: 10%;
       cursor: pointer;
     }
   }
 
-  &__cross:before, &__cross:after {
+  &__cross:before,
+  &__cross:after {
     position: absolute;
     left: 15px;
     content: ' ';
@@ -115,7 +123,6 @@
 
   // -------------------
 
-
   // BURGER MENU
   &__burger {
     display: none;
@@ -123,6 +130,8 @@
     margin: 2rem auto;
     transition: all 0.3s;
     cursor: pointer;
+    position: relative;
+    z-index: 100;
 
     &-line {
       border: 1.5px solid black;
@@ -134,17 +143,46 @@
       display: inline-block;
       text-align: right;
     }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -55%);
+      background-color: $color-secondary;
+      border-radius: 50%;
+      width: 80%;
+      height: 115%;
+      z-index: -1;
+      opacity: 0;
+      transition: all .3s ease-in-out;
+    }
+
+    &:hover {
+      &::after {
+        opacity: 1;
+        width: 160%;
+        height: 160%;
+      }
+    }
+
+    &:hover &-line {
+      border: 1.5px solid white;
+    }
+
   }
+
   // -----------------
 }
 
 .show-menu {
-  animation: translateTo0 .4s;
+  animation: translateTo0 0.4s;
   display: flex;
 }
 
 .hide-menu {
-  animation: translateTo100 .3s;
+  animation: translateTo100 0.3s;
 }
 
 .active {

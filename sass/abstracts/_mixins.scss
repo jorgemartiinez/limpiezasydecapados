@@ -6,6 +6,31 @@
   }
 }
 
+@mixin bg ($url){
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: border-box;
+  background-position: top;
+  background-origin: border-box;
+}
+
+@mixin inputCommonStyle {
+  font-family: inherit;
+  font-size: 1.6rem;
+  border-radius: 5rem;
+  width: 60%;
+  height: 5rem;
+  padding: 3rem 3rem;
+  outline: none;
+  transition: .3s ease-in;
+  border: 1.5px solid $color-secondary;
+  &:focus{
+    border: 3px solid $color-secondary;
+    transform: scale(1.02);
+}
+}
+
 // MEDIA QUERY MANAGER
 /*
 0 - 600px:      Phone
