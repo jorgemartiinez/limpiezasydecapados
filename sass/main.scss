@@ -1,21 +1,23 @@
 // ABSTRACT
-@import "abstracts/mixins";
-@import "abstracts/variables";
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
 
 // BASE
-@import "base/animations";
-@import "base/base";
-@import "base/typography";
-@import "base/utilities";
+@import 'base/animations';
+@import 'base/base';
+@import 'base/typography';
+@import 'base/utilities';
 
 // COMPONENTS
-@import "components/btn";
-@import "components/navbar";
-@import "components/service-box";
-@import "components/opinion";
-@import "components/trabajo";
-@import "components/contact-form";
+@import 'components/btn';
+@import 'components/service-box';
+@import 'components/opinion';
+@import 'components/trabajo';
+@import 'components/contact-form';
+@import 'components/404';
 
 // LAYOUTS
-@import "layouts/grid";
-@import "layouts/layout";
+@import 'layouts/grid';
+@import 'layouts/layout';
+@import 'layouts/navbar';
+@import 'layouts/footer';

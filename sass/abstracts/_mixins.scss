@@ -6,7 +6,7 @@
   }
 }
 
-@mixin bg ($url){
+@mixin bg($url) {
   background-image: url($url);
   background-repeat: no-repeat;
   background-size: cover;
@@ -23,12 +23,16 @@
   height: 5rem;
   padding: 3rem 3rem;
   outline: none;
-  transition: .3s ease-in;
+  transition: 0.3s ease-in;
   border: 1.5px solid $color-secondary;
-  &:focus{
+  &:focus {
     border: 3px solid $color-secondary;
     transform: scale(1.02);
-}
+  }
+
+  @include respond(phone) {
+    width: 80%;
+  }
 }
 
 // MEDIA QUERY MANAGER
@@ -47,6 +51,11 @@ ORDER: Base + typography > general layout + grid > page layout > components
 1em = 16px
 */
 @mixin respond($breakpoint) {
+  @if $breakpoint == phone-small {
+    @media only screen and (max-width: 23.1em) {
+      @content;
+    } //600px
+  }
   @if $breakpoint == phone {
     @media only screen and (max-width: 37.5em) {
       @content;

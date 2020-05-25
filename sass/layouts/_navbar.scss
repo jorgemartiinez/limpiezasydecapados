@@ -17,7 +17,14 @@
   }
 
   &__logo {
-    width: 20rem;
+    width: 35rem;
+  }
+
+  &__title-link {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 2rem;
+    color: $color-primary;
   }
 
   &__links-wrapper {
@@ -33,14 +40,13 @@
       display: none;
       background-color: $color-primary;
       flex: 0 0 100%;
-      position: absolute;
+      position: fixed;
       right: 0%;
       top: 0%;
       color: white;
       width: 100%;
       height: 100vh;
       z-index: 200;
-
     }
   }
 
@@ -96,11 +102,12 @@
   &__cross {
     display: none;
     @include respond(tab-port) {
-      font-size: 15rem;
+      font-size: 25rem;
+      padding: 2rem;
       display: block;
       position: absolute;
       top: 5%;
-      left: 10%;
+      right: 10%;
       cursor: pointer;
     }
   }
@@ -145,7 +152,7 @@
     }
 
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       top: 50%;
       left: 50%;
@@ -156,7 +163,7 @@
       height: 115%;
       z-index: -1;
       opacity: 0;
-      transition: all .3s ease-in-out;
+      transition: all 0.3s ease-in-out;
     }
 
     &:hover {
@@ -170,7 +177,6 @@
     &:hover &-line {
       border: 1.5px solid white;
     }
-
   }
 
   // -----------------
@@ -179,6 +185,7 @@
 .show-menu {
   animation: translateTo0 0.4s;
   display: flex;
+  overflow: hidden;
 }
 
 .hide-menu {

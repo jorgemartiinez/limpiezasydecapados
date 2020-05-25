@@ -1,0 +1,83 @@
+.footer {
+  padding: 10rem 10rem 5rem 10rem;
+  background-color: $color-grey-light;
+  display: block;
+  margin: 0 auto;
+
+  &__info {
+    text-align: center;
+  }
+
+  &__icon {
+    width: 10rem;
+    height: 8rem;
+    display: inline-block;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    text-align: center;
+
+    &:hover {
+      animation: pulse 0.8s ease-in infinite;
+    }
+  }
+
+  &__title {
+    font-size: 2.2rem;
+    text-align: center;
+    color: $color-secondary;
+    @include respond(phone) {
+      font-size: 2rem;
+    }
+    @include respond(phone-small) {
+      font-size: 1.7rem;
+    }
+  }
+
+  &__info-text {
+    text-decoration: none;
+    font-style: normal;
+    color: $color-primary;
+    font-size: 1.6rem;
+    @include respond(phone-small) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    font-size: 1.3rem;
+    display: inline;
+    color: $color-primary-dark;
+    text-align: center;
+  }
+
+  &__social {
+    text-align: center;
+  }
+
+  &__social-link {
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+  }
+  &__social-link:hover &__social-logo {
+    animation: pulse 0.8s ease-in-out infinite;
+  }
+
+  &__social-logo {
+    width: 4rem;
+    height: 3rem;
+  }
+}
+
+.copyright {
+  background-color: $color-primary;
+  width: 100%;
+}
+
+.copyright-text {
+  text-align: center;
+  color: #fff;
+  font-size: 1.4rem;
+  padding: 1.5rem;
+}

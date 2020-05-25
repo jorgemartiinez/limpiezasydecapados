@@ -14,7 +14,8 @@
   outline: none;
 
   &__icon {
-    margin-right: 0.3rem;
+    margin-right: .5rem;
+    width: 1.5rem;
   }
 
   &:hover {
@@ -36,7 +37,7 @@
   &--outline {
     font-size: 1.8rem;
     padding: 2rem 3rem;
-    background-color: transparent;
+    background-color: #fff;
     border: 2px solid $color-secondary;
     color: $color-secondary;
     animation: moveInLeft 0.6s ease-in-out 0.6s;
@@ -55,6 +56,12 @@
 
   &--border-thic {
     border-width: 2px;
-    color: white;
+  }
+
+  &--nav {
+    padding: 1rem 1.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

@@ -23,19 +23,18 @@
 
   &__welcome {
     width: 100%;
-    padding: 5rem 2rem;
+    padding: 7rem 2rem;
     @include respond(tab-port) {
       padding-top: 0;
     }
 
     .heading-primary {
-      animation: moveInLeft .6s ease-in-out;
+      animation: moveInLeft 0.6s ease-in-out;
     }
 
     .paragraph {
-      animation: moveInRight .6s ease-in-out .3s;
+      animation: moveInRight 0.6s ease-in-out 0.3s;
     }
-
   }
 
   &__illus {
@@ -44,11 +43,17 @@
     padding-right: 2rem;
     width: 100%;
 
+    animation: fadeIn .6s ease-in 0.6s;
+
     @include respond(tab-port) {
       display: block;
       width: 44rem;
       margin: 5rem auto;
     }
+  }
+
+  &__img {
+    width: 100%;
   }
 
   &__btn {
@@ -57,7 +62,7 @@
     background-color: transparent;
     border: 2px solid $color-secondary;
     color: $color-secondary;
-    animation: moveInLeft .6s ease-in-out .6s;
+    animation: moveInLeft 0.6s ease-in-out 0.6s;
 
     &:hover {
       background-color: $color-secondary;
@@ -73,8 +78,7 @@
 }
 
 .services {
-
-  @include bg("../assets/img/bg1.svg");
+  @include bg('../assets/img/bg1.svg');
 
   padding: 10rem;
 
@@ -109,14 +113,13 @@
     display: block;
     margin: 0 auto;
     padding: 2rem 2rem;
-
   }
   font-size: 1.5rem;
-
 }
 
 .contact {
   padding: 10rem;
-
-  @include bg("../assets/img/bg2.svg")
+  @include bg('../assets/img/bg2.svg');
 }
+
+.grecaptcha-badge { visibility: hidden; }
