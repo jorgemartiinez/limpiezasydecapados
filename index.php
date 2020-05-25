@@ -8,7 +8,8 @@
   <!-- Meta Tags -->
   <meta name="keywords" content="limpiezas y decapados alcoy, soluciones k3, limpiezas alcoy, decapados alcoy, limpiezas alicante, decapados alicante">
   <meta name="description" content="Somos una empresa que ofrece servicios de limpieza, decapados y restauración profesionales a un precio muy económico." />
-  <link rel="shortcut icon" href="assets/img/logo.jpeg" type="image/ico">
+  <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/ico">
+  <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
 
   <meta name="author" content="Limpiezas y Decapados Alcoy" />
   <meta name="copyright" content="Limpiezas y Decapados Alcoy" />
@@ -321,10 +322,17 @@
     </p>
   </footer>
 
+  <div class="cookie-bar">
+    <span class="cookie-bar__text">Esta web utiliza cookies para mejorar la experiencia y proporcionar funcionalidades adicionales.</span>
+    <a class="btn btn--outline btn--cookie btn--small" href>Aceptar</a>
+  </div>
+
   <!-- Scripts -->
+  <noscript>Necesitas tener Javascript activado para visualizar esta web.</noscript>
   <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-  <script src="js/main.js"></script>
+  <script type="text/javascript" src="js/vendor/cookieBar.min.js"></script>
+  <script src="js/main.min.js"></script>
 </body>
 
 </html>

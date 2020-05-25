@@ -14,7 +14,7 @@
   outline: none;
 
   &__icon {
-    margin-right: .5rem;
+    margin-right: 0.5rem;
     width: 1.5rem;
   }
 
@@ -52,6 +52,14 @@
       transform: translateY(-1px);
       box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2); // al clicar el boton hacemos la sombra más pequeña
     }
+  }
+
+  &--small {
+    font-size: 1.2rem;
+    padding: .5rem 1rem;
+    background-color: #fff;
+    border: 2px solid $color-secondary;
+    color: $color-secondary;
   }
 
   &--border-thic {

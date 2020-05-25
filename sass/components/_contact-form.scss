@@ -23,6 +23,7 @@
 
   &__textarea {
     @include inputCommonStyle;
+    resize: none;
     height: 20rem;
     vertical-align: top;
   }

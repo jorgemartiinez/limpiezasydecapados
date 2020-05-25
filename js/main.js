@@ -1,4 +1,7 @@
 $(document).ready(function () {
+  // cookies
+  $('.cookie-bar').cookieBar({ closeButton: '.btn--cookie', expiresDays: 30 });
+  // boton descarga
   var descargar = $('#descargar-folleto');
 
   descargar.click(function () {
@@ -85,12 +88,9 @@ $(document).ready(function () {
     window.location = 'mailto:' + email + arroba + dominio;
   });
 
-
   $('#phone-contact').click(function () {
     window.location = 'tel:' + '676201598';
   });
-
-
 });
 
 function enviarForm(e) {
