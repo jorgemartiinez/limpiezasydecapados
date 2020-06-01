@@ -333,6 +333,6 @@
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
   <script type="text/javascript" src="js/vendor/cookieBar.min.js"></script>
   <script src="js/main.min.js"></script>
-</body>
+</body> 
 
 </html>
