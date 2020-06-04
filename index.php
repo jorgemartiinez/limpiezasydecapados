@@ -29,6 +29,7 @@
 
 <body>
   <header class="header">
+    <!-- Barra de navegación -->
     <nav class="nav">
       <div class="nav__logo">
         <a href="#inicio" class="nav__title-link">
@@ -65,6 +66,7 @@
     </nav>
   </header>
 
+  <!-- Hero section -->
   <section class="hero" id="inicio" data-anchor="inicio">
     <div class="u-spacer">
       &nbsp;
@@ -96,12 +98,14 @@
   </section>
 
   <main class="main">
+
+    <!-- Sección servicios -->
     <section class="services" id="servicios" data-anchor="servicios">
-      <div class="row">
         <h2 class="heading-secondary u-margin-bottom-mini u-center-text">Nuestros servicios</h2>
         <p class="paragraph u-text-white u-center-text u-margin-bottom-big">
           Ofrecemos soluciones integrales de limpieza, desinfección y restauración en edificios e instalaciones de todo tipo.
         </p>
+      <div class="row">
         <div class="col-1-of-3">
           <article class="service">
             <img class="service__icon u-margin-bottom-small" src="assets/img/icons/car-icon.svg" alt="Icono coche - Servicio limpieza parkings y naves industriales" />
@@ -171,6 +175,7 @@
       </div>
     </section>
 
+    <!-- Sección opiniones clientes -->
     <section class="client-opinion u-margin-top-big u-margin-bottom-medium">
       <h2 class="heading-secondary u-margin-bottom-medium u-center-text">LO QUE OPINAN NUESTROS CLIENTES</h2>
       <div class="row">
@@ -247,6 +252,7 @@
     </section>
   </main>
 
+  <!-- Sección contacto -->
   <section class="contact" id="contacto" data-anchor="contacto">
     <div class="row">
       <form id="contact-form" class="form u-center-text">
@@ -276,6 +282,7 @@
     </div>
   </section>
 
+  <!-- Footer -->
   <footer class="footer">
     <div class="row">
       <div class="col-1-of-3">
@@ -333,6 +340,6 @@
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
   <script type="text/javascript" src="js/vendor/cookieBar.min.js"></script>
   <script src="js/main.min.js"></script>
-</body> 
+</body>
 
 </html>

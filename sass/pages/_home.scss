@@ -1,0 +1,50 @@
+
+
+.services {
+  @include bg('../assets/img/bg1.svg');
+
+  padding: 10rem;
+
+  .heading-secondary {
+    color: $color-white;
+  }
+
+  @include respond(phone) {
+    padding: 8em 1rem 5rem 1rem;
+    margin-top: 0.5rem;
+  }
+}
+
+.client-opinion {
+  padding: 5rem;
+  .heading-secondary {
+    color: $color-black;
+  }
+}
+
+.trabajos {
+  background-color: $color-grey-light;
+  padding: 5rem;
+}
+
+.folleto {
+  padding: 5rem;
+
+  .btn {
+    font-size: 2rem;
+    font-weight: 500;
+    display: block;
+    margin: 0 auto;
+    padding: 2rem 2rem;
+  }
+  font-size: 1.5rem;
+}
+
+.contact {
+  padding: 10rem;
+  @include bg('../assets/img/bg2.svg');
+}
+
+.grecaptcha-badge {
+  visibility: hidden;
+}

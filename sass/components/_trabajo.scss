@@ -1,3 +1,4 @@
+// * TARJETA TRABAJO CON EFECTO
 .trabajo {
   position: relative;
   padding: .5rem;
@@ -10,6 +11,7 @@
     transition: all 0.3s;
   }
 
+  // * OVERLAY CON TEXTO
   &__overlay {
     font-size: 2rem;
     opacity: 0;

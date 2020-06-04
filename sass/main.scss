@@ -1,3 +1,5 @@
+/* ARCHIVO PRINCIPAL DÓNDE REALIZAR LAS IMPORTACIONES DE LOS DISTINTOS ARCHIVOS DE SCSS */
+
 // ABSTRACT
 @import 'abstracts/mixins';
 @import 'abstracts/variables';
@@ -22,3 +24,8 @@
 @import 'layouts/layout';
 @import 'layouts/navbar';
 @import 'layouts/footer';
+@import 'layouts/hero';
+
+// PAGES
+
+@import 'pages/home';
