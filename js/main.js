@@ -1,4 +1,7 @@
 $(document).ready(function () {
+  // lazy load
+  $('img.lazy').Lazy();
+
   // cookies
   $('.cookie-bar').cookieBar({ closeButton: '.btn--cookie', expiresDays: 30 });
   // boton descarga
@@ -106,12 +109,12 @@ function enviarForm(e) {
     data: { email: email, nombre: nombre, mensaje: mensaje },
     success: function (res) {
       $('#contact-form').trigger('reset');
-      Swal.fire({ html: '<h2>Mensaje enviado correctamente</h2> <p>Nos pondremos en contacto contigo lo antes posible</p>', icon: 'success' });
+      swal({ title: 'Mensaje enviado correctamente', text: 'Gracias. Nos pondremos en contacto contigo lo antes posible', icon: 'success' });
     },
     err: function () {
-      Swal.fire({
-        html:
-          '<h2>Error al enviar el correo</h2> <p>Se ha producido un error al enviar el email. Si el problema persiste ponte en contacto con nosotros vía email directamente</p>',
+      swal({
+        title: 'Error al enviar el correo',
+        text: 'Si el problema persiste ponte en contacto con nosotros vía email directamente',
         icon: 'error'
       });
     }
