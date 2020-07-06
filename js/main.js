@@ -9,8 +9,12 @@ $(document).ready(function () {
     gallery: {
       enabled: true
     },
-    mainClass: 'fadeIn'
-
+    mainClass: 'fadeIn',
+    image: {
+      titleSrc: function (item) {
+        return item.el.find('p').html();
+      }
+    }
   });
 
   $.extend(true, $.magnificPopup.defaults, {
