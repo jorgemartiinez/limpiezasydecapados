@@ -23,6 +23,8 @@
   <meta property="og:image:height" content="200">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/main.min.css" />
+  <!-- Magnific Popup CSS  -->
+  <link rel="stylesheet" href="css/vendor/magnific.min.css">
   <title>Inicio | <?= $info['title'] ?></title>
 </head>
 
@@ -54,7 +56,7 @@
             <a href="#trabajos" class="nav__link" title="Ir a Trabajos" data-scroll="trabajos">trabajos</a>
           </li>
           <li class="nav__item">
-            <a href="#contacto" class="nav__link"  title="Ir a Contacto" data-scroll="contacto">contacto</a>
+            <a href="#contacto" class="nav__link" title="Ir a Contacto" data-scroll="contacto">contacto</a>
           </li>
           <li class="nav__item">
             <a href="http://solucionesk3.es/" target="blank" rel="referrer" class="nav__link" title="Ir a la web de Soluciones K3">K3</a>
@@ -64,7 +66,7 @@
       </div>
       <div class="nav__btn">
         <a class="btn btn--nav" href="tel:676201598" id="call-me" title="Llamar a <?= $info['title'] ?>">
-        <img class="btn__icon" src="assets/img/icons/tel-icon.svg" alt="Llamar a empresa" /> 676 201 598</a>
+          <img class="btn__icon" src="assets/img/icons/tel-icon.svg" alt="Llamar a empresa" /> 676 201 598</a>
       </div>
     </nav>
   </header>
@@ -164,10 +166,12 @@
         if ($rowCount % $numOfCols == 0) { ?> <div class="row"> <?php }
                                                               $rowCount++; ?>
           <div class="col-1-of-3">
-            <article class="trabajo">
-              <img class="trabajo__img lazy" data-src="assets/img/trabajos/<?= $job['img'] ?>" alt="Trabajo <?= $job['overlay_text'] ?>" />
-              <p class="trabajo__overlay"><?= $job['overlay_text'] ?></p>
-            </article>
+            <a class="popup-img" href="assets/img/trabajos/<?= $job['img'] ?>">
+              <article class="trabajo">
+                <img class="trabajo__img lazy" data-src="assets/img/trabajos/<?= $job['img'] ?>" alt="Trabajo <?= $job['overlay_text'] ?>" />
+                <p class="trabajo__overlay"><?= $job['overlay_text'] ?></p>
+              </article>
+            </a>
           </div>
           <?php
           if ($rowCount % $numOfCols == 0) { ?> </div>
@@ -278,6 +282,10 @@
   <!-- lazy load -->
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.10/jquery.lazy.min.js"></script>
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.10/jquery.lazy.plugins.min.js"></script>
+
+  <!-- Magnific Popup core JS file -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
   <!-- Sweet alert -->
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <!-- Cookies -->
