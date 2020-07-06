@@ -48,10 +48,15 @@ $(document).ready(function () {
     var pos = $id.offset().top - 20;
 
     // animated top scrolling
-    navItems.addClass('hide-menu');
-    setTimeout(function () {
-      navItems.removeClass('show-menu');
-    }, 250);
+    var windscroll = $(window).width();
+
+    if (windscroll <= 900) {
+      navItems.addClass('hide-menu');
+      setTimeout(function () {
+        navItems.removeClass('show-menu');
+      }, 250);
+    }
+
     $('body, html').animate({ scrollTop: pos }, 800);
   });
   // -----------------
@@ -66,12 +71,12 @@ $(document).ready(function () {
       }
     })
     .scroll();
-  // Optimalisation: Store the references outside the event handler:
+
   var $window = $(window);
 
   function checkWidth() {
     var windowsize = $window.width();
-    if (windowsize > 895) {
+    if (windowsize > 895 && navItems.hasClass('hide-menu')) {
       navItems.removeClass('hide-menu');
       navItems.removeClass('show-menu');
     }
@@ -85,7 +90,7 @@ $(document).ready(function () {
 
   var email = 'info';
   var arroba = '@';
-  var dominio = 'limpiezasydecapadosalcoy.es';
+  var dominio = 'globaldec.es';
 
   $('#email-contact').click(function () {
     window.location = 'mailto:' + email + arroba + dominio;

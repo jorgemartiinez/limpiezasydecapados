@@ -15,9 +15,9 @@ $name = strip_tags(htmlspecialchars($_POST['nombre']));
 $email_address = strip_tags(htmlspecialchars($_POST['email']));
 $message = strip_tags(htmlspecialchars($_POST['mensaje']));
 
-$to = 'info@limpiezasydecapadosalcoy.es'; //email que recibirá.
+$to = 'info@globaldec.es'; //email que recibirá.
 $email_subject = "Mensaje de contacto recibido de:  $name";
-$email_body = "Ha recibido un mensaje de contacto de la pagina web de Limpiezas y Decapados.\n\n" . "Aqui tiene los detalles:\n\nNombre: $name\n\nEmail: $email_address\n\nMensaje:\n$message";
+$email_body = "Ha recibido un mensaje de contacto de la pagina web de Globaldec.\n\n" . "Aqui tiene los detalles:\n\nNombre: $name\n\nEmail: $email_address\n\nMensaje:\n$message";
 $headers = 'From: ' . $email_address . "\r\n" .
     'Reply-To: ' . $email_address . "\r\n" .
     'X-Mailer: PHP/' . phpversion() . "\"Content-Type: text/html; charset=UTF-8\"";

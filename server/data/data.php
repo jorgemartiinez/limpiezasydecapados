@@ -2,7 +2,7 @@
 
 // * ARRAY PARA ALMACENAR ALGUNOS STRINGS QUE SE REPITAN EN LA PÁGINA
 $info = array(
-    'title' => 'Limpiezas y Decapados Alcoy'
+    'title' => 'Globaldec Alcoy'
 );
 
 // * DATA LOOP SERVICIOS
@@ -18,7 +18,7 @@ $services = array(
     array(
         'icon' => 'clean-icon.svg',
         'title' => 'Limpieza de comunidades',
-        'text' => 'Ofrecemos un servicio de limpieza y mantenimiento en Alcoy y poblaciones cercanas. Nos hacemos cargo del mantenimiento de áreas
+        'text' => 'Ofrecemos servicios de limpieza y mantenimiento en Alcoy y poblaciones cercanas. Nos hacemos cargo del mantenimiento de áreas
         comunes y del acceso de viviendas. Le ofrecemos una amplia gama de servicios de limpieza, desinfección e higienización.'
     ),
 

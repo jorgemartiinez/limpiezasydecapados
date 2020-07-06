@@ -5,26 +5,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <!-- Meta Tags -->
   <meta name="keywords" content="<?= $info['title'] ?>, soluciones k3, limpiezas alcoy, decapados alcoy, limpiezas alicante, decapados alicante">
-  <meta name="description" content="Somos una empresa que ofrece servicios de limpieza, decapados y restauración profesionales a un precio muy económico." />
+  <meta name="description" content="Somos una empresa de Alcoy que ofrece servicios de limpieza, decapados y restauración profesionales a un precio muy económico." />
   <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/ico">
   <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
-
   <meta name="author" content="<?= $info['title'] ?>" />
   <meta name="copyright" content="<?= $info['title'] ?>" />
   <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/ico">
-  <link rel="canonical" href="https://limpiezasydecapadosalcoy.es" />
-  <meta property="og:image" content="https://limpiezasydecapadosalcoy.es/assets/img/logo.jpeg">
-  <meta property="og:url" content="https://limpiezasydecapadosalcoy.es">
+  <link rel="canonical" href="https://globaldec.es" />
+  <meta property="og:image" content="https://globaldec.es/assets/img/logo.jpeg">
+  <meta property="og:url" content="https://globaldec.es">
   <meta property="og:title" content="Inicio | <?= $info['title'] ?>">
   <meta property="og:description" content="Somos una empresa ubicada en Alcoy que ofrece servicios de limpieza, decapados y restauración profesionales a un precio muy económico.">
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="200">
   <meta property="og:image:height" content="200">
-  <link rel="stylesheet" href="css/main.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.min.css" />
   <title>Inicio | <?= $info['title'] ?></title>
 </head>
 
@@ -47,22 +45,26 @@
       <div class="nav__links-wrapper">
         <ul class="nav__links">
           <li class="nav__item">
-            <a href="#inicio" class="nav__link" data-scroll="inicio">inicio</a>
+            <a href="#inicio" class="nav__link" title="Ir a Inicio" data-scroll="inicio">inicio</a>
           </li>
           <li class="nav__item">
-            <a href="#servicios" class="nav__link" data-scroll="servicios">servicios</a>
+            <a href="#servicios" class="nav__link" title="Ir a Servicios" data-scroll="servicios">servicios</a>
           </li>
           <li class="nav__item">
-            <a href="#trabajos" class="nav__link" data-scroll="trabajos">trabajos</a>
+            <a href="#trabajos" class="nav__link" title="Ir a Trabajos" data-scroll="trabajos">trabajos</a>
           </li>
           <li class="nav__item">
-            <a href="#contacto" class="nav__link" data-scroll="contacto">contacto</a>
+            <a href="#contacto" class="nav__link"  title="Ir a Contacto" data-scroll="contacto">contacto</a>
+          </li>
+          <li class="nav__item">
+            <a href="http://solucionesk3.es/" target="blank" rel="referrer" class="nav__link" title="Ir a la web de Soluciones K3">K3</a>
           </li>
           <a class="nav__cross"> </a>
         </ul>
       </div>
       <div class="nav__btn">
-        <a class="btn btn--nav" href="tel:676201598" id="call-me"><img class="btn__icon" src="assets/img/icons/tel-icon.svg" alt="Llamar a empresa" /> 676 201 598</a>
+        <a class="btn btn--nav" href="tel:676201598" id="call-me" title="Llamar a <?= $info['title'] ?>">
+        <img class="btn__icon" src="assets/img/icons/tel-icon.svg" alt="Llamar a empresa" /> 676 201 598</a>
       </div>
     </nav>
   </header>
@@ -82,7 +84,7 @@
         <div class="hero__welcome">
           <h1 class="heading-primary u-margin-bottom-small">Limpiezas y decapados profesionales</h1>
           <p class="paragraph u-margin-bottom-medium u-text-primary">
-            Desde <span class="u-text-accent">Limpieza y Decapado Alcoy</span> ofrecemos todo tipo de soluciones de limpieza y restauración a un
+            Desde <span class="u-text-accent"><?= $info['title'] ?></span> ofrecemos todo tipo de soluciones de limpieza y restauración a un
             precio muy económico.
           </p>
           <div class="u-center-text">
@@ -114,7 +116,7 @@
                                                               $rowCount++; ?>
           <div class="col-1-of-3">
             <article class="service">
-              <img class="service__icon u-margin-bottom-small lazy" data-src="assets/img/icons/<?= $service['icon'] ?>" alt="Icono Servicio <?= $service['title'] ?>" />
+              <img class="service__icon u-margin-bottom-small lazy" data-src="assets/img/icons/<?= $service['icon'] ?>" alt="Icono Servicio <?= $service['title'] ?> <?= $info['title'] ?>" />
               <h3 class="heading-tertiary u-margin-bottom-small"><?= $service['title'] ?></h3>
               <p class="paragraph u-text-primary">
                 <?= $service['text'] ?>
@@ -133,7 +135,7 @@
       <div class="row">
         <div class="story">
           <figure class="story__shape">
-            <img src="assets/img/clientes/profile_pic.png" alt="Person on a tour" class="story__img" />
+            <img src="assets/img/clientes/profile_pic.png" alt="Opinión Cliente ICS Gráfico <?= $info['title'] ?>" class="story__img" />
             <figcaption class="story__caption">ICS Gráfico Alcoy</figcaption>
           </figure>
 
@@ -235,7 +237,7 @@
       <div class="col-1-of-3">
         <div class="footer__info">
           <img class="footer__icon lazy" data-src="assets/img/icons/email-icon.svg" alt="Dirección <?= $info['title'] ?>" id="email-contact">
-          <h3 class="footer__title">info@limpiezasydecapadosalcoy.es</h3>
+          <h3 class="footer__title">info@globaldec.es</h3>
           <address class="footer__info-text">Solicite su presupuesto sin compromiso. Se sorprenderá gratamente con nuestros precios.</address>
           <span>
         </div>
@@ -243,15 +245,15 @@
     </div>
     <div class="row">
       <div class="footer__social">
-        <a class="footer__link" href="#">Política de privacidad</a>
+        <a class="footer__link" href="#" title="Ver Política de Privacidad">Política de privacidad</a>
       </div>
     </div>
     <div class="row">
       <div class="footer__social">
-        <a class="footer__social-link" href="https://www.youtube.com/channel/UCjMCy83lHLODkVZR-SnpbFQ">
+        <a title="Ir a nuestro canal de Youtube" rel="noreferrer" class="footer__social-link" href="https://bit.ly/2NZrrcT">
           <img data-src="assets/img/icons/youtube-icon.svg" class="footer__social-logo lazy" alt="Acceder a Youtube">
         </a>
-        <a class="footer__social-link" href="https://es-es.facebook.com/pages/category/Janitorial-Service/Soluciones-K3-limpieza-y-restauraci%C3%B3n-584800761884510/">
+        <a title="Ir a nuestro Facebook" class="footer__social-link" rel="noreferrer" href="https://bit.ly/2Z1VOFC">
           <img data-src="assets/img/icons/facebook-icon.svg" class="footer__social-logo lazy" alt="Acceder a Facebook">
         </a>
       </div>
@@ -280,7 +282,7 @@
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <!-- Cookies -->
   <script type="text/javascript" src="js/vendor/cookieBar.min.js"></script>
-  <script src="js/main.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

@@ -7,7 +7,7 @@
   transition: all 0.3s;
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.30);
   height: 46rem;
-
+  cursor: pointer;
   @media screen and (max-width: 56.24em) {
     height: auto;
   }
