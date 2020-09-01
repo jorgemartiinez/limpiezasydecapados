@@ -22,7 +22,7 @@ $(document).ready(function () {
     tLoading: 'Cargando...', // Text that is displayed during loading. Can contain %curr% and %total% keys
     gallery: {
       tPrev: 'Anterior (Tecla flecha izquierda)', // Alt text on left arrow
-      tNext: 'Sigueinte (Tecla flecha derecha)', // Alt text on right arrow
+      tNext: 'Siguiente (Tecla flecha derecha)', // Alt text on right arrow
       tCounter: '%curr% de %total%' // Markup for "1 of 7" counter
     },
     image: {

@@ -1,33 +1,40 @@
 /* TARJETA SERVICIO */
 
 .service {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   background-color: $color-white;
-  padding: 5rem 2em;
+  min-height: 50rem;
+
+  @include respond(tab-land){
+    min-height: 65rem;
+  }
+
+  @include respond(tab-port){
+    min-height: auto;
+  }
+
+  padding: 4rem 2rem;
   border-radius: 4rem;
   transition: all 0.3s;
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.30);
-  height: 46rem;
-  cursor: pointer;
-  @media screen and (max-width: 56.24em) {
-    height: auto;
-  }
 
-  @media (min-width: 56em) and (max-width: 80em) {
-    height: 55rem;
-  }
+
+  cursor: pointer;
 
   &__icon {
     display: block;
-    width: 10rem;
-    height: 10rem;
+    min-width: 10rem;
+    min-height: 10rem;
+    max-width: 10rem;
+    max-height: 10rem;
     margin-right: auto;
   }
 
   .heading-tertiary {
-      width: 70%;
-      @include respond(tab-port) {
-        width: 80%;
-      }
+      width: 95%;
   }
 
   .paragraph{

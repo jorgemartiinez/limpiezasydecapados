@@ -286,6 +286,8 @@
   .mfp-title {
     text-align: left;
     line-height: 18px;
+    font-size: 1.7rem;
+    padding-top: .5rem;
     color: #F3F3F3;
     word-wrap: break-word;
     padding-right: 36px; }

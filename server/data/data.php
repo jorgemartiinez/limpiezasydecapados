@@ -2,7 +2,7 @@
 
 // * ARRAY PARA ALMACENAR ALGUNOS STRINGS QUE SE REPITAN EN LA PÁGINA
 $info = array(
-    'title' => 'Globaldec Alcoy'
+    'title' => 'Global Dec Alcoy'
 );
 
 // * DATA LOOP SERVICIOS
@@ -10,47 +10,56 @@ $services = array(
 
     array(
         'icon' => 'car-icon.svg',
-        'title' => 'Parkings y naves industriales',
-        'text' => 'Nos encargamos de darle un espacio de trabajo más limpio y saludable sus empleados. Le ofrecemos una gran variedad de programas de
-        mantenimiento preventivo, desinfección e higienización adaptables a sus necesidades y presupuesto.'
+        'title' => 'Decapado de Superficies Métalicas',
+        'text' => 'Consiste en expulsar arena a presión mediante un chorro de aire con el fin de eliminar el óxido y pinturas. Es una técnica óptima para las superficies metálicas, estructuras de edificios, embarcaciones de hierro, piezas, barandillas, etc. Como resultado dejamos una superficie limpia y porosa para un agarre óptimo de la imprimación.'
     ),
 
     array(
-        'icon' => 'clean-icon.svg',
-        'title' => 'Limpieza de comunidades',
-        'text' => 'Ofrecemos servicios de limpieza y mantenimiento en Alcoy y poblaciones cercanas. Nos hacemos cargo del mantenimiento de áreas
-        comunes y del acceso de viviendas. Le ofrecemos una amplia gama de servicios de limpieza, desinfección e higienización.'
+        'icon' => 'pool-icon.svg',
+        'title' => 'Decapado y limpieza de piscinas',
+        'text' => 'El arenado, granallado, chorreado, es imprescindible para trabajos que requieran la limpieza de superficie. <br/> En <span class="u-text-accent">Global Dec</span> nos encargamos de la eliminación de pintura con chorro de arena y de los servicios de limpieza con agua a presión, además de su correspondiente mantenimiento.'
     ),
 
     array(
         'icon' => 'wood-icon.svg',
-        'title' => 'Decapado de madera y metal',
-        'text' => ' Restauración y limpieza profesional de superficies de madera y metal como suelos antiguos, revestimientos de madera, muebles,
-        carrocerías de vehículos, vigas, puertas, paneles y demás, mediante chorro a presión de arena o vidrio a baja presión.'
-    ),
-
-    array(
-        'icon' => 'building-icon.svg',
-        'title' => 'Limpieza en altura',
-        'text' => 'En <span class="u-text-accent">Limpieza y Decapado Alcoy</span> podemos ocuparnos de la limpieza de las ventanas de su vivienda o
-        negocio. No importa si son o no accesibles desde el suelo. Contamos con el material y los medios necesarios para realizar este
-        servicio de forma segura y efectiva.'
+        'title' => 'Decapado, limpieza y Tratamiento de madera',
+        'text' => 'En Global Dec también ofrecemos <span class="u-text-accent">servicios de limpieza</span> de madera con chorro de arena. Con el paso del tiempo la madera empieza a oscurecerse y a ensuciarse con restos de morteros y polvo. Con la <span class="u-text-accent">limpieza abrasiva</span> le devolvemos el aspecto original, usando diferentes abrasivos para cada superficie.'
     ),
 
     array(
         'icon' => 'grafiti-icon.svg',
-        'title' => 'Eliminación de grafitis',
-        'text' => 'Aunque los grafitis pueden ser considerados una forma de expresión artística, se convierten con demasiada frecuencia en actos
-        vandálicos que pueden ser antiestéticos. Nos encargamos de la eliminación de cualquiera de ellos con herramientas específicas de
-        limpieza.'
+        'title' => 'Eliminación de grafitis con chorro de arena',
+        'text' => 'Somos especialistas con muchos años de experiencia en servicios de <span class="u-text-accent">Limpieza de grafitis</span>. Nos encargamos de su eliminación con chorro de arena y con productos y máquinas profesionales. <br/> <span class="u-text-accent"> Y ATENCIÓN, ¡Si no se quitan no cobramos!</span>'
     ),
 
     array(
         'icon' => 'facade-icon.svg',
-        'title' => 'Limpieza de fachadas',
-        'text' => 'Desde <span class="u-text-accent">Limpieza y Decapado Alcoy</span> somos especialistas en este servicio. Garantizamos que su edificio
-        esté bien mantenido, limpio y sea acogedor para sus visitantes en todo momento. Nuestros métodos de limpieza emplean las técnicas más
-        avanzadas y profesionales.'
+        'title' => 'Fachadas y edificios',
+        'text' => '<span class="u-text-accent">Global Dec</span> garantiza, a través de sus servicios, que su edificio este bien mantenido, limpio y sea acogedor para sus visitantes en todo momento. Ofrecemos múltiples servicios para lograr este servicio con una gran eficacia y satisfacción para nuestros clientes. Ya sea con chorro de arena, agua a presión, decapados, arenado, pulido, granallado, etc'
+    ),
+
+    array(
+        'icon' => 'crio-icon.svg',
+        'title' => 'Limpieza criogénica',
+        'text' => 'Es una forma de limpieza con dióxido de carbono, donde  el hielo seco, sale a altas velocidades con la ayuda del aire comprimido y actúa de forma similar al método del chorro de arena, consiguiendo eliminar la suciedad de la superficie al instante. No produce conducción de corriente, de forma que podemos limpiar motores, circuitos eléctricos, grasas, pinturas o incluso limpiar tras un incendio.'
+    ),
+
+    array(
+        'icon' => 'clean-icon.svg',
+        'title' => 'Limpieza doméstica',
+        'text' => 'Desde <span class="u-text-accent">Global Dec</span> nos encargamos de la limpieza y mantenimiento de comunidades, escaleras, chalets, casas, negocios en general, etc. Contamos con herramientas de limpieza a pavor que sirven para eliminar las bacterias de un determinado ambiente o superficie.'
+    ),
+
+    array(
+        'icon' => 'industry-icon.svg',
+        'title' => 'Limpieza industrial',
+        'text' => 'Nuestra empresa es experta en servicios de limpieza industrial de grandes superficies. Para mantener las instalaciones limpias y operar de manera segura, en <span class="u-text-accent">Global Dec</span> recomendamos una limpieza profunda de manera consistente y frecuente. <br/> Ofrecemos servicios de limpieza industrial, viaria, agua a presión y desinfección con vapor.'
+    ),
+
+    array(
+        'icon' => 'boat-icon.svg',
+        'title' => 'Decapado de embarcaciones',
+        'text' => 'Nos encargamos de la eliminación de antifouling con chorro de arena. En <span class="u-text-accent">náutica</span>, un buen arenado sobre la embarcación beneficia a la hidrodinamica y mejora el mantenimiento del buque. Nuestra técnicas aportan distintos beneficios como conocer el estado real de la embarcación y llegar a todos los rincones de la misma de forma muy rápida, a diferencia de los métodos tradicionales.'
     ),
 
 );

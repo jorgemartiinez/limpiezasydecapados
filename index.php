@@ -86,7 +86,7 @@
         <div class="hero__welcome">
           <h1 class="heading-primary u-margin-bottom-small">Limpiezas y decapados profesionales</h1>
           <p class="paragraph u-margin-bottom-medium u-text-primary">
-            Desde <span class="u-text-accent"><?= $info['title'] ?></span> ofrecemos todo tipo de soluciones de limpieza y restauración a un
+            Desde <span class="u-text-accent"><?= $info['title'] ?></span> ofrecemos todo tipo de soluciones de decapados y limpieza a un
             precio muy económico.
           </p>
           <div class="u-center-text">
@@ -107,8 +107,11 @@
     <!-- Sección servicios -->
     <section class="services" id="servicios" data-anchor="servicios">
       <h2 class="heading-secondary u-margin-bottom-mini u-center-text">Nuestros servicios</h2>
-      <p class="paragraph u-text-white u-center-text u-margin-bottom-big">
+      <p class="paragraph u-text-white u-center-text">
         Ofrecemos soluciones integrales de limpieza, desinfección y restauración en edificios e instalaciones de todo tipo.
+      </p>
+      <p class="paragraph u-text-white u-center-text u-margin-bottom-big">
+        Haga click en el servicio para saber más sobre el.
       </p>
       <?php
       $numOfCols = 3;
@@ -117,7 +120,7 @@
         if ($rowCount % $numOfCols == 0) { ?> <div class="row"> <?php }
                                                               $rowCount++; ?>
           <div class="col-1-of-3">
-            <article class="service">
+            <article class="service" title="Clic para saber más">
               <img class="service__icon u-margin-bottom-small lazy" data-src="assets/img/icons/<?= $service['icon'] ?>" alt="Icono Servicio <?= $service['title'] ?> <?= $info['title'] ?>" />
               <h3 class="heading-tertiary u-margin-bottom-small"><?= $service['title'] ?></h3>
               <p class="paragraph u-text-primary">
