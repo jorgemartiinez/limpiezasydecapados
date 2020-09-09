@@ -37,3 +37,17 @@
 .paragraph {
   font-size: 1.6rem;
 }
+
+.paragraph-desc {
+  font-size: 1.9rem;
+}
+
+.atention {
+  color: #fff;
+  background-color: $color-secondary;
+  margin-right: -33%;
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 1rem;
+}

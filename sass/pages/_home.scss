@@ -22,6 +22,16 @@
   }
 }
 
+
+.service-info {
+  @include bg('../assets/img/bg1.svg');
+  padding: 10rem;
+  @include respond(phone) {
+    padding: 8em 1rem 5rem 1rem;
+    margin-top: 0.5rem;
+  }
+}
+
 .trabajos {
   background-color: $color-grey-light;
   padding: 8rem;
